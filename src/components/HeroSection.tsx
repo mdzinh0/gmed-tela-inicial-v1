@@ -11,13 +11,13 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-slide-up">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Sistema Completo de{" "}
-                <span className="text-primary">Ultrassom</span>
-              </h1>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                Tecnologia Médica de{" "}
+                <span className="text-primary">Nova Geração</span>
+              </h2>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Plataforma integrada para gravação, análise e acompanhamento de 
-                exames obstétricos com tecnologia de ponta
+                Sistema GMED oferece gravação em tempo real, análise inteligente 
+                e gestão completa para exames de ultrassom obstétricos
               </p>
             </div>
 

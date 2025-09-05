@@ -1,20 +1,44 @@
-import { Activity } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Activity, Heart, User } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-bg border-b border-border py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-medical mb-6">
-            <Activity className="w-8 h-8 text-primary-foreground" />
+    <header className="bg-gradient-bg border-b border-border">
+      {/* Top Navigation Bar */}
+      <div className="bg-white/80 backdrop-blur-sm border-b border-border/50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-medical">
+                <Activity className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <div className="font-bold text-lg text-foreground">GMED</div>
+            </div>
+            
+            <div className="flex gap-3">
+              <Button variant="medical" className="group">
+                <Heart className="w-4 h-4" />
+                Área Da Clínica
+              </Button>
+              <Button variant="patient" className="group">
+                <User className="w-4 h-4" />
+                Acesso do Paciente
+              </Button>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Sistema Integrado de{" "}
-            <span className="text-primary">Ultrassom</span>
+        </div>
+      </div>
+
+      {/* Hero Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+            <span className="text-primary">GMED</span> - Sistema Avançado de{" "}
+            <span className="text-secondary">Gravação de Ultrassom</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Plataforma completa para gestão médica e acompanhamento de
-            exames obstétricos
+          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
+            Plataforma completa para captura, análise e gestão de exames obstétricos 
+            com tecnologia de ponta e interface intuitiva
           </p>
         </div>
       </div>
