@@ -29,19 +29,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Hero Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-col items-center text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-            <span className="text-primary">GMED</span> - Sistema Avançado de{" "}
-            <span className="text-secondary">Gravação de Ultrassom</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Plataforma completa para captura, análise e gestão de exames obstétricos 
-            com tecnologia de ponta e interface intuitiva
-          </p>
-        </div>
-      </div>
     </header>
   );
 };
