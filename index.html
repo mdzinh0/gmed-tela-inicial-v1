@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GMED - Sistema Avançado de Gravação de Ultrassom</title>
-    <meta name="description" content="Plataforma completa para captura, análise e gestão de exames obstétricos com tecnologia de ponta" />
+    <meta name="description" content="Sistema médico para gravação e análise de ultrassom obstétrico com tecnologia de ponta" />
     <meta name="keywords" content="GMED, gravação ultrassom, sistema médico, exames obstétricos, gestão médica, pacientes" />
     <meta name="author" content="GMED" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="GMED" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
 
     <meta property="og:title" content="GMED - Sistema Avançado de Gravação de Ultrassom" />
-    <meta property="og:description" content="Plataforma completa para captura, análise e gestão de exames obstétricos com tecnologia de ponta" />
+    <meta property="og:description" content="Sistema médico para gravação e análise de ultrassom obstétrico com tecnologia de ponta" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
@@ -21,5 +30,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
