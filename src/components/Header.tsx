@@ -12,7 +12,7 @@ const Header = () => {
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-medical">
                 <Activity className="w-5 h-5 text-primary-foreground" />
               </div>
-              <div className="font-bold text-lg text-foreground">GMED</div>
+              <div className="font-bold text-lg text-foreground">GMED - Sistema Avançado de Gravação de Ultrassom</div>
             </div>
             
             <div className="flex gap-3">
