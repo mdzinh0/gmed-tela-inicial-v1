@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Activity, Heart, User } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Header = () => {
   return (
@@ -15,7 +16,8 @@ const Header = () => {
               <div className="font-bold text-lg text-foreground">GMED - Sistema Avançado de Gravação de Ultrassom</div>
             </div>
             
-            <div className="flex gap-3">
+            <div className="flex gap-3 items-center">
+              <ThemeToggle />
               <Button variant="medical" className="group">
                 <Heart className="w-4 h-4" />
                 Área Da Clínica
